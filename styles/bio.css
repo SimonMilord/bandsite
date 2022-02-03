@@ -1,5 +1,65 @@
-.logo {
+@font-face {
+  font-family: "AvenirNextLT-regular";
+  src: url(../assets/Font/AvenirNextLTPro-Regular.otf) format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AvenirNextLT-bold";
+  src: url(../assets/Font/AvenirNextLTPro-Bold.otf) format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AvenirNextLT-demi";
+  src: url(../assets/Font/AvenirNextLTPro-Demi.otf) format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+body {
+  margin: 0;
+  font-family: "AvenirNextLT-regular", Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+header {
+  background-color: #323232;
+  display: flex;
+  flex-direction: column;
+}
+header .logo-link {
+  text-decoration: none;
+  max-width: 120px;
+  max-height: 20px;
+}
+header .logo-link .logo {
+  text-transform: uppercase;
   font-size: 24px;
   line-height: 32px;
   font-weight: 700;
+  color: #FFF;
+  max-height: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+header .nav-list {
+  padding: 0;
+  display: flex;
+}
+header .nav-list .nav-list__item {
+  list-style-type: none;
+  color: #FFF;
+}
+.hero {
+  background-image: url(../assets/Images/hero-bio.jpg);
+}
+
+.photos {
+  background-color: #FAFAFA;
+}
+
+footer {
+  background-color: #323232;
+  color: #FFF;
 }/*# sourceMappingURL=bio.css.map */

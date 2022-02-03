@@ -1,12 +1,79 @@
 @use './partials/mixin' as *;
 @use './partials/variables' as *;
+@use './partials/fonts' as *;
+
+
+* {
+  // border: 1px dashed orange;
+}
+
+body {
+  margin: 0;
+  font-family: 'AvenirNextLT-regular', Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+// NAV BAR / HEADER SECTION
+
+header {
+  background-color: $BandSite-Black;
+  display: flex;
+  flex-direction: column;
+
+  .logo-link {
+    text-decoration: none;
+    max-width: 120px;
+    max-height: 20px;
+
+    .logo {
+      text-transform: uppercase;
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 700;
+      color: $White;
+      max-height: 100%;
+      max-width: 100%;
+      margin: 0;
+    }
+  }
+
+  .nav-list {
+    padding: 0;
+    display: flex;
+
+    .nav-list__item {
+      list-style-type: none;
+      color: $White;
+
+      .nav-list__link {
+
+      }
+    }
+  }
+}
+
+// HERO SECTION
+
+.hero {
+  background-image: url(../assets/Images/hero-bio.jpg);
+}
 
 
 
 
+// ABOUT SECTION
 
-.logo {
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 700;
+
+// PHOTOS GALLERY SECTION
+.photos {
+  background-color: $Alabaster;
+}
+
+// FOOTER SECTION
+
+footer {
+  background-color: $BandSite-Black;
+  color: $White;
 }
