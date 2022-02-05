@@ -23,53 +23,67 @@ body {
   font-style: normal;
 }
 
-header, .hero, .about, .photos, footer {
+.hero, .about, .photos, footer {
   padding: 1rem;
 }
 
-header {
+.header__wrapper, .wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.header {
   background-color: #323232;
+}
+.header .header__wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
-header .logo-link {
+.header .header__wrapper .logo {
   text-decoration: none;
   max-width: 120px;
   max-height: 20px;
-}
-header .logo-link .logo {
   text-transform: uppercase;
-  font-size: 24px;
-  line-height: 32px;
+  color: #FFF;
+  font-size: 1.5rem;
   font-weight: 700;
-  color: #FFF;
-  max-height: 100%;
-  max-width: 100%;
-  margin: 0;
+  padding: 1rem;
 }
-header nav {
+.header .header__wrapper nav {
   width: 100%;
 }
-header .nav-list {
+.header .header__wrapper nav .nav__list {
   padding: 0;
+  margin: 0;
+  list-style: none;
   display: flex;
-  width: 100%;
 }
-header .nav-list .nav-list__item {
-  list-style-type: none;
-  width: 100%;
-}
-header .nav-list .nav-list__item .nav-list__link {
-  color: #FFF;
-  text-decoration: none;
-  width: 100%;
+.header .header__wrapper nav .nav__list .nav__item {
+  width: 50%;
   display: flex;
   justify-content: center;
 }
-header .nav-list .nav-list__item .nav-list__link.nav-list__link:hover {
-  border-bottom: 2px solid #FFF;
+.header .header__wrapper nav .nav__list .nav__item.nav__item--active {
+  border-bottom: 4px solid #FFF;
+}
+.header .header__wrapper nav .nav__list .nav__item.nav__item--active .nav__link {
+  font-family: "AvenirNextLT-demi";
+  color: #FFF;
+}
+.header .header__wrapper nav .nav__list .nav__item.nav__item:hover {
+  border-bottom: 4px solid #FFF;
+}
+.header .header__wrapper nav .nav__list .nav__item.nav__item:hover .nav__link {
+  color: #FFF;
+}
+.header .header__wrapper nav .nav__list .nav__item .nav__link {
+  color: #E1E1E1;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
 }
 
 .hero {

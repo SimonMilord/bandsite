@@ -2,6 +2,7 @@
 @use './partials/variables' as *;
 @use './partials/fonts' as *;
 
+// GENERAL STYLING
 
 * {
   // border: 1px dashed orange;
@@ -12,66 +13,84 @@ body {
   font-family: 'AvenirNextLT-regular', Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
-
 }
 
-header, .hero, .about, .photos, footer {
+.hero, .about, .photos, footer {
   padding: 1rem;
+}
+
+// wrapper:
+.header__wrapper, .wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 // NAV BAR / HEADER SECTION
 
-header {
+.header {
   background-color: $BandSite-Black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
-  .logo-link {
-    text-decoration: none;
-    max-width: 120px;
-    max-height: 20px;
+  .header__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 
     .logo {
+      text-decoration: none;
+      max-width: 120px;
+      max-height: 20px;
       text-transform: uppercase;
-      font-size: 24px;
-      line-height: 32px;
-      font-weight: 700;
       color: $White;
-      max-height: 100%;
-      max-width: 100%;
-      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 700;
+      padding: 1rem;
     }
-  }
 
-  nav {
-    width: 100%;
-  }
-
-  .nav-list {
-    padding: 0;
-    display: flex;
-    width: 100%;
-
-    .nav-list__item {
-      list-style-type: none;
+    nav {
       width: 100%;
 
-      .nav-list__link {
-        color: $White;
-        text-decoration: none;
-        width: 100%;
+      .nav__list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
         display: flex;
-        justify-content: center;
 
-        &.nav-list__link:hover {
-          border-bottom: 2px solid $White;
+        .nav__item {
+          width: 50%;
+          display: flex;
+          justify-content: center;
+
+          &.nav__item--active {
+            border-bottom: 4px solid $White;
+
+            .nav__link {
+              font-family: "AvenirNextLT-demi";
+              color: $White;
+            }
+          }
+
+          &.nav__item:hover {
+            border-bottom: 4px solid $White;
+
+            .nav__link {
+              color: $White;
+            }
+          }
+          .nav__link {
+            color: $Mercury;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+
+          }
         }
       }
     }
   }
 }
+
 
 // HERO SECTION
 
