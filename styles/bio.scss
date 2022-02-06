@@ -26,6 +26,13 @@ body {
   margin: 0 auto;
 }
 
+.subheader {
+  font-size: 24px;
+  font-family: 'AvenirNextLT-demi', Arial, sans-serif;
+  font-weight: 700;
+  line-height: 32px;
+}
+
 // NAV BAR / HEADER SECTION
 
 .header {
@@ -135,9 +142,7 @@ body {
     padding-top: 1.5rem;
     padding-bottom: 1rem;
     margin: 0;
-    line-height: 32px;
-    font-weight: 700;
-    font-family: 'AvenirNextLT-demi', Arial, sans-serif;
+    // I tried to put the bold font but it seemed way off with the mockup
   }
 
   .about__img {
@@ -175,6 +180,7 @@ body {
 // PHOTOS GALLERY SECTION
 .photos {
   background-color: $Alabaster;
+  padding: 1rem 1rem 0rem 1rem;
 
   .photo__title {
 
@@ -184,6 +190,7 @@ body {
 
     .photos__item {
       width: 100%;
+      padding-bottom: 1rem;
     }
   }
 }
