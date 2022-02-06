@@ -21,7 +21,7 @@ body {
 }
 
 // wrapper:
-.header__wrapper, .hero__wrapper {
+.header__wrapper, .hero__wrapper, .wrapper {
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -38,11 +38,18 @@ body {
 .header {
   background-color: $BandSite-Black;
 
-  .header__wrapper {
+  &__wrapper {
+    @extend .wrapper;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    @include tablet {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      padding-left: 2.25rem;
+    }
 
     .logo {
       text-decoration: none;
@@ -53,10 +60,16 @@ body {
       font-size: 1.5rem;
       font-weight: 700;
       padding: 1rem;
+      display: flex;
+      align-items: center;
     }
 
     nav {
       width: 100%;
+      @include tablet {
+        width: 10rem;
+        margin-left: 4rem;
+      }
 
       .nav__list {
         padding: 0;
@@ -68,6 +81,10 @@ body {
           width: 50%;
           display: flex;
           justify-content: center;
+          @include tablet {
+            height: 4rem;
+            margin: 1rem 2rem 0rem 0rem;
+          }
 
           &.nav__item--active {
             border-bottom: 4px solid $White;
@@ -105,7 +122,7 @@ body {
   background-image: url(../assets/Images/hero-bio.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 30vh;
+  height: 17rem;
 
   .hero__overlay {
     width: 100%;
@@ -131,8 +148,6 @@ body {
     }
   }
 }
-
-
 
 // ABOUT SECTION
 .about {
@@ -221,7 +236,6 @@ footer {
       }
     }
   }
-
 
   .footer-card {
     margin: 2rem 0rem;
