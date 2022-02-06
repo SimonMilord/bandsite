@@ -295,55 +295,111 @@ body {
 footer {
   background-color: $BandSite-Black;
   color: $White;
+  @include tablet {
+    padding: 2.25rem;
+  }
 
   .top-footer {
     display: flex;
     flex-direction: column;
-
-    .footer-title {
-      max-width: 55%;
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
     }
 
-    .social {
-      max-width: 35%;
-      display: flex;
-      justify-content: space-between;
+    .top-footer--left{
+      @include tablet {
+        width: 60%;
+        display: flex;
+        // justify-content: flex-start;
+      }
+      .footer-title {
+        max-width: 54%;
+        @include tablet {
+          font-size: 36px;
+          line-height: 44px;
+          max-width: 100%;
+          margin-right: 2rem;
+        }
+      }
 
-      .social__link {
+      .social {
+        max-width: 35%;
+        display: flex;
+        justify-content: space-between;
+        @include tablet {
+          width: 20%;
+          display: flex;
+          align-items: center;
+        }
 
-        .social__icon {
+        .social__link {
+          display: flex;
+          @include tablet {
+            height: 22px;
+            margin-right: 2rem;
+          }
 
+          .social__icon {
+            display: flex;
+            @include tablet {
+
+            }
+          }
         }
       }
     }
+
+    .logo {
+      display: none;
+
+      @include tablet {
+        display: flex;
+      }
+    }
   }
-
-  .footer-card {
-    margin: 2rem 0rem;
-    .person {
-      margin: 1rem 0rem;
-
-      .footer-card__name, .footer-card__company {
-        font-family: 'AvenirNextLT-demi', Arial, sans-serif;
-        margin: 3px 0px;
-      }
+  .card-container {
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
     }
+    .footer-card {
+      margin: 2rem 0rem;
+      .person {
+        margin: 1rem 0rem;
 
-    .address {
-
-      .footer-card__info {
-        margin: 3px 0px;
+        .footer-card__name, .footer-card__company {
+          font-family: 'AvenirNextLT-demi', Arial, sans-serif;
+          margin: 3px 0px;
+        }
       }
-    }
 
-    .footer-card__email {
+      .address {
 
+        .footer-card__info {
+          margin: 3px 0px;
+        }
+      }
+
+      .footer-card__email {
+
+      }
     }
   }
 
   .bottom-footer {
     margin-top: 5rem;
+    @include tablet {
+      margin: 0rem 0rem 2rem 0rem;
+    }
 
+    .logo {
+      @include tablet {
+        display: none;
+      }
+    }
     .copyright {
 
     }

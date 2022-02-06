@@ -270,31 +270,101 @@ footer {
   background-color: #323232;
   color: #FFF;
 }
+@media (min-width: 768px) {
+  footer {
+    padding: 2.25rem;
+  }
+}
 footer .top-footer {
   display: flex;
   flex-direction: column;
 }
-footer .top-footer .footer-title {
-  max-width: 55%;
+@media (min-width: 768px) {
+  footer .top-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
-footer .top-footer .social {
+@media (min-width: 768px) {
+  footer .top-footer .top-footer--left {
+    width: 60%;
+    display: flex;
+  }
+}
+footer .top-footer .top-footer--left .footer-title {
+  max-width: 54%;
+}
+@media (min-width: 768px) {
+  footer .top-footer .top-footer--left .footer-title {
+    font-size: 36px;
+    line-height: 44px;
+    max-width: 100%;
+    margin-right: 2rem;
+  }
+}
+footer .top-footer .top-footer--left .social {
   max-width: 35%;
   display: flex;
   justify-content: space-between;
 }
-footer .footer-card {
+@media (min-width: 768px) {
+  footer .top-footer .top-footer--left .social {
+    width: 20%;
+    display: flex;
+    align-items: center;
+  }
+}
+footer .top-footer .top-footer--left .social .social__link {
+  display: flex;
+}
+@media (min-width: 768px) {
+  footer .top-footer .top-footer--left .social .social__link {
+    height: 22px;
+    margin-right: 2rem;
+  }
+}
+footer .top-footer .top-footer--left .social .social__link .social__icon {
+  display: flex;
+}
+footer .top-footer .logo {
+  display: none;
+}
+@media (min-width: 768px) {
+  footer .top-footer .logo {
+    display: flex;
+  }
+}
+@media (min-width: 768px) {
+  footer .card-container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+footer .card-container .footer-card {
   margin: 2rem 0rem;
 }
-footer .footer-card .person {
+footer .card-container .footer-card .person {
   margin: 1rem 0rem;
 }
-footer .footer-card .person .footer-card__name, footer .footer-card .person .footer-card__company {
+footer .card-container .footer-card .person .footer-card__name, footer .card-container .footer-card .person .footer-card__company {
   font-family: "AvenirNextLT-demi", Arial, sans-serif;
   margin: 3px 0px;
 }
-footer .footer-card .address .footer-card__info {
+footer .card-container .footer-card .address .footer-card__info {
   margin: 3px 0px;
 }
 footer .bottom-footer {
   margin-top: 5rem;
+}
+@media (min-width: 768px) {
+  footer .bottom-footer {
+    margin: 0rem 0rem 2rem 0rem;
+  }
+}
+@media (min-width: 768px) {
+  footer .bottom-footer .logo {
+    display: none;
+  }
 }/*# sourceMappingURL=bio.css.map */
