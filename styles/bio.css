@@ -99,7 +99,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   height: 30vh;
-  width: 100vw;
 }
 .hero .hero__overlay {
   width: 100%;
@@ -157,4 +156,32 @@ body {
 footer {
   background-color: #323232;
   color: #FFF;
+}
+footer .top-footer {
+  display: flex;
+  flex-direction: column;
+}
+footer .top-footer .footer-title {
+  max-width: 55%;
+}
+footer .top-footer .social {
+  max-width: 35%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-card {
+  margin: 2rem 0rem;
+}
+footer .footer-card .person {
+  margin: 1rem 0rem;
+}
+footer .footer-card .person .footer-card__name, footer .footer-card .person .footer-card__company {
+  font-family: "AvenirNextLT-demi", Arial, sans-serif;
+  margin: 3px 0px;
+}
+footer .footer-card .address .footer-card__info {
+  margin: 3px 0px;
+}
+footer .bottom-footer {
+  margin-top: 5rem;
 }/*# sourceMappingURL=bio.css.map */

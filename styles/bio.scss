@@ -106,7 +106,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   height: 30vh;
-  width: 100vw;
 
   .hero__overlay {
     width: 100%;
@@ -201,4 +200,57 @@ footer {
   background-color: $BandSite-Black;
   color: $White;
 
+  .top-footer {
+    display: flex;
+    flex-direction: column;
+
+    .footer-title {
+      max-width: 55%;
+    }
+
+    .social {
+      max-width: 35%;
+      display: flex;
+      justify-content: space-between;
+
+      .social__link {
+
+        .social__icon {
+
+        }
+      }
+    }
+  }
+
+
+  .footer-card {
+    margin: 2rem 0rem;
+    .person {
+      margin: 1rem 0rem;
+
+      .footer-card__name, .footer-card__company {
+        font-family: 'AvenirNextLT-demi', Arial, sans-serif;
+        margin: 3px 0px;
+      }
+    }
+
+    .address {
+
+      .footer-card__info {
+        margin: 3px 0px;
+      }
+    }
+
+    .footer-card__email {
+
+    }
+  }
+
+  .bottom-footer {
+    margin-top: 5rem;
+
+    .copyright {
+
+    }
+  }
 }
