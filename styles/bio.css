@@ -185,11 +185,30 @@ body {
   font-size: 16px;
   font-family: "AvenirNextLT-demi";
 }
+@media (min-width: 768px) {
+  .about .quote {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+@media (min-width: 768px) {
+  .about .quote .quote__credit {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
 .about .bio .bio__title {
   font-size: 14px;
   line-height: 22px;
   font-family: "AvenirNextLT-demi", Arial, sans-serif;
   margin: 2rem 0rem 0.5rem 0rem;
+}
+@media (min-width: 768px) {
+  .about .bio .bio__title {
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 4rem;
+  }
 }
 .about .bio .bio__boxcontent {
   display: flex;
@@ -218,9 +237,33 @@ body {
   background-color: #FAFAFA;
   padding: 1rem 1rem 0rem 1rem;
 }
+@media (min-width: 768px) {
+  .photos {
+    padding: 2.25rem;
+  }
+}
+@media (min-width: 768px) {
+  .photos .photos__title {
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+@media (min-width: 768px) {
+  .photos .photos__gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
 .photos .photos__gallery .photos__item {
   width: 100%;
   padding-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .photos .photos__gallery .photos__item {
+    width: 30%;
+    padding-bottom: 1.5rem;
+  }
 }
 
 footer {
