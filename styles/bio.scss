@@ -25,6 +25,7 @@ body {
 .hero__wrapper,
 .photos__wrapper,
 .footer__wrapper,
+.about__wrapper,
 .wrapper {
   max-width: 1000px;
   margin: 0 auto;
@@ -37,10 +38,15 @@ body {
   line-height: 32px;
 }
 
-.main-header--tablet {
-  font-size: 60px;
-  line-height: 68px;
-}
+// .main-header--tablet {
+//   font-size: 60px;
+//   line-height: 68px;
+// }
+
+// .body-text--tablet {
+//   font-size: 14px;
+//   line-height: 22px;
+// }
 
 // NAV BAR / HEADER SECTION
 
@@ -173,12 +179,28 @@ body {
 
 // ABOUT SECTION
 .about {
+  @include tablet {
+    padding: 32px 96px;
+  }
 
-  .about__title {
-    padding-top: 1.5rem;
-    padding-bottom: 1rem;
-    margin: 0;
-    // I tried to put the bold font but it seemed way off with the mockup
+  .about__wrapper {
+
+    .about__title {
+      padding-top: 1.5rem;
+      padding-bottom: 1rem;
+      margin: 0;
+      // I tried to put the bold font but it seemed way off with the mockup
+      @include tablet {
+        font-size: 36px;
+        line-height: 44px;
+        margin-left: -3.75rem;
+        padding-bottom: 2rem;
+      }
+
+      .about__infobox {
+
+      }
+    }
   }
 
   .about__img {
@@ -188,13 +210,6 @@ body {
   .quote {
     font-size: 16px;
     font-family: 'AvenirNextLT-demi';
-    .quote__content {
-
-    }
-
-    .quote__credit {
-
-    }
   }
 
   .bio {
@@ -202,13 +217,28 @@ body {
     .bio__title {
       font-size: 14px;
       line-height: 22px;
-
       font-family: "AvenirNextLT-demi", Arial, sans-serif;
+      margin: 2rem 0rem 0.5rem 0rem;
     }
-    .bio__infocard {
-      font-size: 13px;
-      line-height: 18px;
-      color: $BandSite-Black;
+
+    .bio__boxcontent {
+      display: flex;
+      flex-direction: column;
+      @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .bio__infocard {
+        font-size: 13px;
+        line-height: 18px;
+        color: $BandSite-Black;
+        @include tablet {
+          width: 48%;
+          font-size: 14px;
+          line-height: 22px;
+        }
+      }
     }
   }
 }
