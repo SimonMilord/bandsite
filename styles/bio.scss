@@ -21,7 +21,11 @@ body {
 }
 
 // wrapper:
-.header__wrapper, .hero__wrapper, .wrapper {
+.header__wrapper,
+.hero__wrapper,
+.photos__wrapper,
+.footer__wrapper,
+.wrapper {
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -33,10 +37,20 @@ body {
   line-height: 32px;
 }
 
+.main-header--tablet {
+  font-size: 60px;
+  line-height: 68px;
+}
+
 // NAV BAR / HEADER SECTION
 
 .header {
   background-color: $BandSite-Black;
+  @include desktop {
+    // position: fixed;
+    // top: 0;
+    // width: 100%;
+  }
 
   &__wrapper {
     @extend .wrapper;
@@ -123,6 +137,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   height: 17rem;
+  @include tablet {
+    height: 95vh;
+    background-position: 80% 60%;
+  }
 
   .hero__overlay {
     width: 100%;
@@ -139,12 +157,16 @@ body {
     display: flex;
     align-items: center;
     position: relative;
-    padding-left: 1rem;
 
     .hero__title {
-      margin: 0;
+      margin-left: 1rem;
       color: $White;
       position: relative;
+      @include tablet {
+        margin-left: 2.25rem;
+        font-size: 60px;
+        line-height: 68px;
+      }
     }
   }
 }
