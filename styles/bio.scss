@@ -148,9 +148,9 @@ body {
   .hero__overlay {
     width: 100%;
     height: 100%;
-    opacity: 0.5;
-    background-color: $BandSite-Black;
+    background: rgba(50, 50, 50, 0.5);
     position: relative;
+    z-index: 1;
   }
 
   .hero__wrapper {
@@ -159,12 +159,14 @@ body {
     display: flex;
     align-items: center;
     position: relative;
+    z-index: 1;
     justify-content: flex-start;
 
     .hero__title {
       margin-left: 1rem;
       color: $White;
       position: relative;
+      z-index: 2;
       @include tablet {
         margin-left: 2.25rem;
         font-size: 3.75rem;
