@@ -11,3 +11,13 @@
     @content;
   }
 }
+
+@mixin tablet-subheader {
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+}
+
+@mixin space-between {
+  display: flex;
+  justify-content: space-between;
+}

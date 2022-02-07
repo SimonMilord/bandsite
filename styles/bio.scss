@@ -5,6 +5,7 @@
 // GENERAL STYLING
 
 * {
+  box-sizing: border-box;
   // border: 1px dashed orange;
 }
 
@@ -17,7 +18,7 @@ body {
 }
 
 .about, .photos, footer {
-  padding: 1rem;
+  padding: 0rem 1rem;
 }
 
 // wrapper:
@@ -27,60 +28,57 @@ body {
 .footer__wrapper,
 .about__wrapper,
 .wrapper {
-  max-width: 1000px;
+  max-width: 62.5rem;
   margin: 0 auto;
 }
 .logo {
   text-decoration: none;
-  max-width: 120px;
-  max-height: 20px;
+  max-width: 7.5rem;
+  max-height: 1.25rem;
   text-transform: uppercase;
   color: $White;
   font-size: 1.5rem;
   font-weight: 700;
-  padding: 1rem;
+  margin-top: 1rem;
   display: flex;
   align-items: center;
+
+  @include tablet {
+    padding-left: 0;
+  }
 }
 
 .subheader {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-family: 'AvenirNextLT-demi', Arial, sans-serif;
   font-weight: 700;
-  line-height: 32px;
+  line-height: 2rem;
 }
-
-// .main-header--tablet {
-//   font-size: 60px;
-//   line-height: 68px;
-// }
-
-// .body-text--tablet {
-//   font-size: 14px;
-//   line-height: 22px;
-// }
 
 // NAV BAR / HEADER SECTION
 
 .header {
   background-color: $BandSite-Black;
-  @include desktop {
-    // position: fixed;
-    // top: 0;
-    // width: 100%;
+  @include tablet {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 80;
   }
 
   &__wrapper {
     @extend .wrapper;
-    display: flex;
+    @include space-between;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     @include tablet {
       flex-direction: row;
       justify-content: flex-start;
       align-items: center;
       padding-left: 2.25rem;
+    }
+    @include desktop {
+      padding-left: 0;
     }
 
     nav {
@@ -143,7 +141,7 @@ body {
   background-size: cover;
   height: 17rem;
   @include tablet {
-    height: 95vh;
+    height: 70vh;
     background-position: 80% 60%;
   }
 
@@ -153,7 +151,6 @@ body {
     opacity: 0.5;
     background-color: $BandSite-Black;
     position: relative;
-
   }
 
   .hero__wrapper {
@@ -162,6 +159,7 @@ body {
     display: flex;
     align-items: center;
     position: relative;
+    justify-content: flex-start;
 
     .hero__title {
       margin-left: 1rem;
@@ -169,8 +167,11 @@ body {
       position: relative;
       @include tablet {
         margin-left: 2.25rem;
-        font-size: 60px;
-        line-height: 68px;
+        font-size: 3.75rem;
+        line-height: 4.25rem;
+      @include desktop {
+        margin-left: 0;
+      }
       }
     }
   }
@@ -179,7 +180,7 @@ body {
 // ABOUT SECTION
 .about {
   @include tablet {
-    padding: 2rem 2.25rem;
+    padding: 0rem 2.25rem;
   }
 
   .about__wrapper {
@@ -190,8 +191,7 @@ body {
       margin: 0;
       // I tried to put the bold font but it seemed way off with the mockup
       @include tablet {
-        font-size: 36px;
-        line-height: 44px;
+        @include tablet-subheader;
         padding-bottom: 2rem;
       }
     }
@@ -200,7 +200,7 @@ body {
   .about__subwrapper {
     @include tablet {
       width: 80%;
-      max-width: 900px;
+      max-width: 56.25rem;
       margin: 0 auto;
     }
     .about__img {
@@ -208,16 +208,19 @@ body {
     }
 
     .quote {
-      font-size: 16px;
+      font-size: 1rem;
       font-family: 'AvenirNextLT-demi';
       @include tablet {
-        font-size: 24px;
-        line-height: 32px;
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+      @include desktop {
+        max-width: 80%;
       }
       .quote__credit {
         @include tablet {
-          font-size: 20px;
-          line-height: 24px;
+          font-size: 1.25rem;
+          line-height: 1.5rem;
         }
       }
     }
@@ -225,14 +228,14 @@ body {
     .bio {
 
       .bio__title {
-        font-size: 14px;
-        line-height: 22px;
+        font-size: 0.875rem;
+        line-height: 1.375rem;
         font-family: "AvenirNextLT-demi", Arial, sans-serif;
-        margin: 2rem 0rem 0.5rem 0rem;
+        margin: 1.5rem 0rem 0rem 0rem;
         @include tablet {
-          font-size: 24px;
-          line-height: 32px;
-          margin-top: 4rem;
+          font-size: 1.5rem;
+          line-height: 2rem;
+          margin-top: 3rem;
         }
       }
 
@@ -240,18 +243,19 @@ body {
         display: flex;
         flex-direction: column;
         @include tablet {
+          @include space-between;
           flex-direction: row;
-          justify-content: space-between;
         }
 
         .bio__infocard {
-          font-size: 13px;
-          line-height: 18px;
+          font-size: 0.8125rem;
+          line-height: 1.125rem;
           color: $BandSite-Black;
           @include tablet {
             width: 48%;
-            font-size: 14px;
-            line-height: 22px;
+            font-size: 0.875rem;
+            line-height: 1.375rem;
+            margin: 1.5rem 0rem 2rem 0rem;
           }
         }
       }
@@ -266,48 +270,48 @@ body {
   @include tablet {
     padding: 2.25rem;
   }
+  .photos__wrapper {
 
-  .photos__title {
-    @include tablet {
-      font-size: 36px;
-      line-height: 44px;
-    }
-  }
-
-  .photos__gallery {
-    @include tablet {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-    }
-    .photos__item {
-      width: 100%;
-      padding-bottom: 1rem;
+    .photos__title {
       @include tablet {
-        width: 30%;
-        padding-bottom: 1.5rem;
+        @include tablet-subheader;
+        margin: 0.75rem 0rem 2.25rem 0rem;
+      }
+    }
+
+    .photos__gallery {
+      @include tablet {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      .photos__item {
+        width: 100%;
+        padding-bottom: 1rem;
+        @include tablet {
+          width: 30%;
+          padding-bottom: 1.5rem;
+        }
       }
     }
   }
 }
 
 // FOOTER SECTION
-
 footer {
   background-color: $BandSite-Black;
   color: $White;
   @include tablet {
-    padding: 2.25rem;
+    padding: 3rem 2.25rem 2.25rem 2.25rem;
   }
 
   .top-footer {
     display: flex;
     flex-direction: column;
     @include tablet {
-      display: flex;
+      @include space-between;
       flex-direction: row;
       align-items: center;
-      justify-content: space-between;
     }
 
     .top-footer--left{
@@ -319,8 +323,7 @@ footer {
       .footer-title {
         max-width: 54%;
         @include tablet {
-          font-size: 36px;
-          line-height: 44px;
+          @include tablet-subheader;
           max-width: 100%;
           margin-right: 2rem;
           margin: 0rem 2rem 0rem 0rem;
@@ -329,8 +332,7 @@ footer {
 
       .social {
         max-width: 35%;
-        display: flex;
-        justify-content: space-between;
+        @include space-between;
         @include tablet {
           width: 20%;
           display: flex;
@@ -340,15 +342,12 @@ footer {
         .social__link {
           display: flex;
           @include tablet {
-            height: 22px;
+            height: 1.375rem;
             margin-right: 2rem;
           }
 
           .social__icon {
             display: flex;
-            @include tablet {
-
-            }
           }
         }
       }
@@ -370,8 +369,7 @@ footer {
     .footer-card {
       margin: 1rem 0rem;
 
-
-      .person {
+      .footer-card__person {
         margin: 1.5rem 0rem;
         @include tablet {
           margin: 2rem 0rem;
@@ -383,7 +381,7 @@ footer {
         }
       }
 
-      .address {
+      .footer-card__address {
 
         .footer-card__info {
           margin: 3px 0px;
@@ -400,9 +398,11 @@ footer {
   }
 
   .bottom-footer {
-    margin-top: 5rem;
+    margin-top: 4rem;
+    padding-bottom: 1rem;
     @include tablet {
-      margin: 0rem 0rem 2rem 0rem;
+      margin: 0rem;
+      padding: 0;
     }
 
     .logo {
@@ -412,9 +412,6 @@ footer {
       @include tablet {
         display: none;
       }
-    }
-    .copyright {
-
     }
   }
 }
