@@ -38,6 +38,19 @@ body {
   margin: 0 auto;
 }
 
+.logo {
+  text-decoration: none;
+  max-width: 120px;
+  max-height: 20px;
+  text-transform: uppercase;
+  color: #FFF;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
 .subheader {
   font-size: 24px;
   font-family: "AvenirNextLT-demi", Arial, sans-serif;
@@ -61,18 +74,6 @@ body {
     align-items: center;
     padding-left: 2.25rem;
   }
-}
-.header__wrapper .logo {
-  text-decoration: none;
-  max-width: 120px;
-  max-height: 20px;
-  text-transform: uppercase;
-  color: #FFF;
-  font-size: 1.5rem;
-  font-weight: 700;
-  padding: 1rem;
-  display: flex;
-  align-items: center;
 }
 .header__wrapper nav {
   width: 100%;
@@ -162,7 +163,7 @@ body {
 
 @media (min-width: 768px) {
   .about {
-    padding: 32px 96px;
+    padding: 2rem 2.25rem;
   }
 }
 .about .about__wrapper .about__title {
@@ -174,59 +175,65 @@ body {
   .about .about__wrapper .about__title {
     font-size: 36px;
     line-height: 44px;
-    margin-left: -3.75rem;
     padding-bottom: 2rem;
   }
 }
-.about .about__img {
+@media (min-width: 768px) {
+  .about .about__subwrapper {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
+.about .about__subwrapper .about__img {
   width: 100%;
 }
-.about .quote {
+.about .about__subwrapper .quote {
   font-size: 16px;
   font-family: "AvenirNextLT-demi";
 }
 @media (min-width: 768px) {
-  .about .quote {
+  .about .about__subwrapper .quote {
     font-size: 24px;
     line-height: 32px;
   }
 }
 @media (min-width: 768px) {
-  .about .quote .quote__credit {
+  .about .about__subwrapper .quote .quote__credit {
     font-size: 20px;
     line-height: 24px;
   }
 }
-.about .bio .bio__title {
+.about .about__subwrapper .bio .bio__title {
   font-size: 14px;
   line-height: 22px;
   font-family: "AvenirNextLT-demi", Arial, sans-serif;
   margin: 2rem 0rem 0.5rem 0rem;
 }
 @media (min-width: 768px) {
-  .about .bio .bio__title {
+  .about .about__subwrapper .bio .bio__title {
     font-size: 24px;
     line-height: 32px;
     margin-top: 4rem;
   }
 }
-.about .bio .bio__boxcontent {
+.about .about__subwrapper .bio .bio__boxcontent {
   display: flex;
   flex-direction: column;
 }
 @media (min-width: 768px) {
-  .about .bio .bio__boxcontent {
+  .about .about__subwrapper .bio .bio__boxcontent {
     flex-direction: row;
     justify-content: space-between;
   }
 }
-.about .bio .bio__boxcontent .bio__infocard {
+.about .about__subwrapper .bio .bio__boxcontent .bio__infocard {
   font-size: 13px;
   line-height: 18px;
   color: #323232;
 }
 @media (min-width: 768px) {
-  .about .bio .bio__boxcontent .bio__infocard {
+  .about .about__subwrapper .bio .bio__boxcontent .bio__infocard {
     width: 48%;
     font-size: 14px;
     line-height: 22px;
@@ -302,6 +309,7 @@ footer .top-footer .top-footer--left .footer-title {
     line-height: 44px;
     max-width: 100%;
     margin-right: 2rem;
+    margin: 0rem 2rem 0rem 0rem;
   }
 }
 footer .top-footer .top-footer--left .social {
@@ -343,10 +351,15 @@ footer .top-footer .logo {
   }
 }
 footer .card-container .footer-card {
-  margin: 2rem 0rem;
+  margin: 1rem 0rem;
 }
 footer .card-container .footer-card .person {
-  margin: 1rem 0rem;
+  margin: 1.5rem 0rem;
+}
+@media (min-width: 768px) {
+  footer .card-container .footer-card .person {
+    margin: 2rem 0rem;
+  }
 }
 footer .card-container .footer-card .person .footer-card__name, footer .card-container .footer-card .person .footer-card__company {
   font-family: "AvenirNextLT-demi", Arial, sans-serif;
@@ -355,6 +368,14 @@ footer .card-container .footer-card .person .footer-card__name, footer .card-con
 footer .card-container .footer-card .address .footer-card__info {
   margin: 3px 0px;
 }
+footer .card-container .footer-card .footer-card__email {
+  margin: 1.5rem 0rem;
+}
+@media (min-width: 768px) {
+  footer .card-container .footer-card .footer-card__email {
+    margin: 2.5rem 0rem;
+  }
+}
 footer .bottom-footer {
   margin-top: 5rem;
 }
@@ -362,6 +383,10 @@ footer .bottom-footer {
   footer .bottom-footer {
     margin: 0rem 0rem 2rem 0rem;
   }
+}
+footer .bottom-footer .logo {
+  display: flex;
+  padding-left: 0;
 }
 @media (min-width: 768px) {
   footer .bottom-footer .logo {

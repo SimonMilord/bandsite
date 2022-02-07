@@ -30,6 +30,18 @@ body {
   max-width: 1000px;
   margin: 0 auto;
 }
+.logo {
+  text-decoration: none;
+  max-width: 120px;
+  max-height: 20px;
+  text-transform: uppercase;
+  color: $White;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
 
 .subheader {
   font-size: 24px;
@@ -69,19 +81,6 @@ body {
       justify-content: flex-start;
       align-items: center;
       padding-left: 2.25rem;
-    }
-
-    .logo {
-      text-decoration: none;
-      max-width: 120px;
-      max-height: 20px;
-      text-transform: uppercase;
-      color: $White;
-      font-size: 1.5rem;
-      font-weight: 700;
-      padding: 1rem;
-      display: flex;
-      align-items: center;
     }
 
     nav {
@@ -180,7 +179,7 @@ body {
 // ABOUT SECTION
 .about {
   @include tablet {
-    padding: 32px 96px;
+    padding: 2rem 2.25rem;
   }
 
   .about__wrapper {
@@ -193,65 +192,67 @@ body {
       @include tablet {
         font-size: 36px;
         line-height: 44px;
-        margin-left: -3.75rem;
         padding-bottom: 2rem;
       }
-
-      .about__infobox {
-
-      }
     }
   }
 
-  .about__img {
-    width: 100%;
-  }
-
-  .quote {
-    font-size: 16px;
-    font-family: 'AvenirNextLT-demi';
+  .about__subwrapper {
     @include tablet {
-      font-size: 24px;
-      line-height: 32px;
+      width: 80%;
+      max-width: 900px;
+      margin: 0 auto;
     }
-    .quote__credit {
-      @include tablet {
-        font-size: 20px;
-        line-height: 24px;
-      }
+    .about__img {
+      width: 100%;
     }
-  }
 
-  .bio {
-
-    .bio__title {
-      font-size: 14px;
-      line-height: 22px;
-      font-family: "AvenirNextLT-demi", Arial, sans-serif;
-      margin: 2rem 0rem 0.5rem 0rem;
+    .quote {
+      font-size: 16px;
+      font-family: 'AvenirNextLT-demi';
       @include tablet {
         font-size: 24px;
         line-height: 32px;
-        margin-top: 4rem;
+      }
+      .quote__credit {
+        @include tablet {
+          font-size: 20px;
+          line-height: 24px;
+        }
       }
     }
 
-    .bio__boxcontent {
-      display: flex;
-      flex-direction: column;
-      @include tablet {
-        flex-direction: row;
-        justify-content: space-between;
+    .bio {
+
+      .bio__title {
+        font-size: 14px;
+        line-height: 22px;
+        font-family: "AvenirNextLT-demi", Arial, sans-serif;
+        margin: 2rem 0rem 0.5rem 0rem;
+        @include tablet {
+          font-size: 24px;
+          line-height: 32px;
+          margin-top: 4rem;
+        }
       }
 
-      .bio__infocard {
-        font-size: 13px;
-        line-height: 18px;
-        color: $BandSite-Black;
+      .bio__boxcontent {
+        display: flex;
+        flex-direction: column;
         @include tablet {
-          width: 48%;
-          font-size: 14px;
-          line-height: 22px;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        .bio__infocard {
+          font-size: 13px;
+          line-height: 18px;
+          color: $BandSite-Black;
+          @include tablet {
+            width: 48%;
+            font-size: 14px;
+            line-height: 22px;
+          }
         }
       }
     }
@@ -313,7 +314,7 @@ footer {
       @include tablet {
         width: 60%;
         display: flex;
-        // justify-content: flex-start;
+
       }
       .footer-title {
         max-width: 54%;
@@ -322,6 +323,7 @@ footer {
           line-height: 44px;
           max-width: 100%;
           margin-right: 2rem;
+          margin: 0rem 2rem 0rem 0rem;
         }
       }
 
@@ -366,9 +368,14 @@ footer {
       justify-content: space-between;
     }
     .footer-card {
-      margin: 2rem 0rem;
+      margin: 1rem 0rem;
+
+
       .person {
-        margin: 1rem 0rem;
+        margin: 1.5rem 0rem;
+        @include tablet {
+          margin: 2rem 0rem;
+        }
 
         .footer-card__name, .footer-card__company {
           font-family: 'AvenirNextLT-demi', Arial, sans-serif;
@@ -384,7 +391,10 @@ footer {
       }
 
       .footer-card__email {
-
+        margin: 1.5rem 0rem;
+        @include tablet {
+          margin: 2.5rem 0rem;
+        }
       }
     }
   }
@@ -396,6 +406,9 @@ footer {
     }
 
     .logo {
+      display: flex;
+      padding-left: 0;
+
       @include tablet {
         display: none;
       }
