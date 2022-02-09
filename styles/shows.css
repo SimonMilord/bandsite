@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "AvenirNextLT-regular";
+  src: url(../assets/Font/AvenirNextLTPro-Regular.otf) format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AvenirNextLT-bold";
+  src: url(../assets/Font/AvenirNextLTPro-Bold.otf) format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AvenirNextLT-demi";
+  src: url(../assets/Font/AvenirNextLTPro-Demi.otf) format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+.hero {
+  background-image: url(../assets/Images/hero-shows.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 17rem;
+}
+@media (min-width: 768px) {
+  .hero {
+    height: 70vh;
+    background-position: 80% 60%;
+  }
+}/*# sourceMappingURL=shows.css.map */

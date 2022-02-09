@@ -1,0 +1,56 @@
+@use './partials/mixin' as *;
+@use './partials/variables' as *;
+@use './partials/fonts' as *;
+
+// GENERAL STYLING
+
+
+
+// HERO SECTION STYLING
+
+.hero {
+  background-image: url(../assets/Images/hero-shows.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 17rem;
+  @include tablet {
+    height: 70vh;
+    background-position: 80% 60%;
+  }
+
+  // .hero__overlay {
+  //   width: 100%;
+  //   height: 100%;
+  //   background: rgba(50, 50, 50, 0.5);
+  //   position: relative;
+  //   z-index: 1;
+  // }
+
+  // .hero__wrapper {
+  //   width: 100%;
+  //   height: 100%;
+  //   display: flex;
+  //   align-items: center;
+  //   position: relative;
+  //   z-index: 1;
+  //   justify-content: flex-start;
+
+  //   .hero__title {
+  //     margin-left: 1rem;
+  //     color: $White;
+  //     position: relative;
+  //     z-index: 2;
+  //     @include tablet {
+  //       margin-left: 2.25rem;
+  //       font-size: 3.75rem;
+  //       line-height: 4.25rem;
+  //     @include desktop {
+  //       margin-left: 0;
+  //     }
+  //     }
+  //   }
+  // }
+}
+
+
+// SHOWS SECTION STYLING
