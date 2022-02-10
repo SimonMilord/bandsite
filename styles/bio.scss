@@ -29,6 +29,7 @@ body {
 .photos__wrapper,
 .footer__wrapper,
 .about__wrapper,
+.shows__wrapper,
 .wrapper {
   max-width: 62.5rem;
   margin: 0 auto;
@@ -54,6 +55,7 @@ body {
   font-family: 'AvenirNextLT-demi', Arial, sans-serif;
   font-weight: 700;
   line-height: 2rem;
+  color: $BandSite-DarkBlack;
 }
 
 // NAV BAR / HEADER SECTION
@@ -325,6 +327,7 @@ footer {
       }
       .footer-title {
         max-width: 54%;
+        color: $White;
         @include tablet {
           @include tablet-subheader;
           max-width: 100%;

@@ -119,3 +119,47 @@
 
 
 // SHOWS SECTION STYLING
+
+.shows {
+
+  .shows__wrapper {
+
+    .shows__sub-container {
+      margin: 1rem;
+
+
+      .shows__title {
+        margin: 2rem 0rem;
+      }
+      .shows-card {
+        @include divider;
+        margin-bottom: 1rem;
+
+        .shows-card__label {
+          text-transform: uppercase;
+          color: $Silver;
+        }
+
+        .shows-card__info {
+          text-transform: capitalize;
+          color: $BandSite-DarkBlack;
+
+          &--date {
+            font-family: "AvenirNextLT-demi";
+          }
+        }
+
+        .shows-card__btn {
+          width: 100%;
+          @include button;
+          margin-bottom: 1rem;
+
+          @include tablet {
+            min-width: 150px;
+            padding: 0 32px 0 32px;
+          }
+        }
+      }
+    }
+  }
+}
