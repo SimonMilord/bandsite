@@ -16,15 +16,78 @@
   font-weight: 600;
   font-style: normal;
 }
+* {
+  box-sizing: border-box;
+  border: 1px dashed orange;
+}
+
 .hero {
   background-image: url(../assets/Images/hero-shows.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 17rem;
+  height: 25rem;
 }
 @media (min-width: 768px) {
   .hero {
     height: 70vh;
     background-position: 80% 60%;
   }
+}
+@media (min-width: 1280px) {
+  .hero {
+    height: 100vh;
+  }
+}
+.hero .hero__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero .hero__container {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+}
+@media (min-width: 1280px) {
+  .hero .hero__container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+  }
+}
+@media (min-width: 1280px) {
+  .hero .hero__container .hero__sub-container.hero__sub-container--right {
+    height: 18rem;
+    padding: 2rem 0rem;
+  }
+}
+.hero .hero__container .hero__album {
+  color: #FFF;
+  font-family: "AvenirNextLT-demi";
+}
+@media (min-width: 768px) {
+  .hero .hero__container .hero__album {
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+.hero .hero__container .hero__title {
+  margin: 1.5rem 0rem;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .hero .hero__container .hero__title {
+    font-size: 60px;
+    line-height: 68px;
+  }
+}
+.hero .hero__soundcloud {
+  display: flex;
+  flex-direction: column;
+  height: 10rem;
+  width: 100%;
+  max-width: 400px;
 }/*# sourceMappingURL=shows.css.map */
