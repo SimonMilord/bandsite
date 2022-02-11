@@ -132,22 +132,33 @@
 .shows .shows__wrapper .shows__sub-container .shows__title {
   margin: 2rem 0rem;
 }
-.shows .shows__wrapper .shows__sub-container .shows-card {
+.shows .shows__wrapper .shows__sub-container .list {
+  list-style: none;
+  padding-left: 0;
+}
+.shows .shows__wrapper .shows__sub-container .list .list__item {
   border-bottom: 1px solid #E1E1E1;
   margin-bottom: 1rem;
 }
-.shows .shows__wrapper .shows__sub-container .shows-card .shows-card__label {
-  text-transform: uppercase;
+.shows .shows__wrapper .shows__sub-container .list .list__item .list__label {
+  display: flex;
+  flex-direction: column;
   color: #AFAFAF;
+  text-transform: uppercase;
+  font-family: "AvenirNextLT-demi";
+  font-size: 0.75rem;
 }
-.shows .shows__wrapper .shows__sub-container .shows-card .shows-card__info {
+.shows .shows__wrapper .shows__sub-container .list .list__item .list__info {
   text-transform: capitalize;
   color: #000;
+  font-family: "AvenirNextLT-regular", Arial, sans-serif;
+  font-size: 1rem;
+  margin: 16px 0px 24px 0px;
 }
-.shows .shows__wrapper .shows__sub-container .shows-card .shows-card__info--date {
+.shows .shows__wrapper .shows__sub-container .list .list__item .list__info--date {
   font-family: "AvenirNextLT-demi";
 }
-.shows .shows__wrapper .shows__sub-container .shows-card .shows-card__btn {
+.shows .shows__wrapper .shows__sub-container .list .list__item .list__btn {
   width: 100%;
   height: 3rem;
   text-transform: uppercase;
@@ -160,7 +171,7 @@
   margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
-  .shows .shows__wrapper .shows__sub-container .shows-card .shows-card__btn {
+  .shows .shows__wrapper .shows__sub-container .list .list__item .list__btn {
     min-width: 150px;
     padding: 0 32px 0 32px;
   }

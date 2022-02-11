@@ -131,32 +131,39 @@
       .shows__title {
         margin: 2rem 0rem;
       }
-      .shows-card {
-        @include divider;
-        margin-bottom: 1rem;
+      .list {
+        list-style: none;
+        padding-left: 0;
 
-        .shows-card__label {
-          text-transform: uppercase;
-          color: $Silver;
-        }
-
-        .shows-card__info {
-          text-transform: capitalize;
-          color: $BandSite-DarkBlack;
-
-          &--date {
-            font-family: "AvenirNextLT-demi";
-          }
-        }
-
-        .shows-card__btn {
-          width: 100%;
-          @include button;
+        .list__item {
+          @include divider;
           margin-bottom: 1rem;
 
-          @include tablet {
-            min-width: 150px;
-            padding: 0 32px 0 32px;
+          .list__label {
+            @include label;
+          }
+
+          .list__info {
+            text-transform: capitalize;
+            color: $BandSite-DarkBlack;
+            font-family: 'AvenirNextLT-regular', Arial, sans-serif;
+            font-size: 1rem;
+            margin: 16px 0px 24px 0px;
+
+            &--date {
+              font-family: "AvenirNextLT-demi";
+            }
+          }
+
+          .list__btn {
+            width: 100%;
+            @include button;
+            margin-bottom: 1rem;
+
+            @include tablet {
+              min-width: 150px;
+              padding: 0 32px 0 32px;
+            }
           }
         }
       }
