@@ -2,8 +2,6 @@
 @use './partials/variables' as *;
 @use './partials/fonts' as *;
 
-
-
 // GENERAL STYLING
 
 * {
@@ -113,7 +111,7 @@ body {
             border-bottom: 4px solid $White;
 
             .nav__link {
-              font-family: "AvenirNextLT-demi";
+              font-family: 'AvenirNextLT-demi', Arial, sans-serif;
               color: $White;
             }
           }
@@ -217,7 +215,7 @@ body {
 
     .quote {
       font-size: 1rem;
-      font-family: 'AvenirNextLT-demi';
+      font-family: 'AvenirNextLT-demi', Arial, sans-serif;
       @include tablet {
         font-size: 1.5rem;
         line-height: 2rem;
@@ -308,63 +306,105 @@ body {
 // JOIN THE CONVERSATION SECTION (COMMENTS SECTION)
 
 .comments {
-  padding: 1rem;
+  padding: 0rem 1rem;
   .comments__wrapper {
-    @include divider;
 
-    .comments__title {
+    .comments__top {
+      @include divider;
+      padding-bottom: 1rem;
 
-    }
-    .comments__container {
-      display: flex;
-      justify-content: flex-start;
+      .comments__title {
 
-      .comments__avatar {
-        background-color: $Mercury;
-        background-image: url(../assets/Images/Mohan-muruge.jpg);
-        height: 2.25rem;
-        width: 2.25rem;
-        background-position: center left;
-        background-size: cover;
-        border-radius: 50%;
-        margin: 1.375rem 1rem 0rem 0rem;
-
-        @include tablet {
-          width: 3rem;
-          height: 3rem;
-        }
       }
+      .comments__container {
+        display: flex;
+        justify-content: flex-start;
 
-      .comments__form-box {
-        width: 100%;
+        .comments__avatar {
+          background-color: $Mercury;
+          height: 2.25rem;
+          width: 2.25rem;
+          background-position: center left;
+          background-size: cover;
+          border-radius: 50%;
+          margin: 1.375rem 1rem 0rem 0rem;
 
-        .comments__form {
-          display: flex;
-          flex-direction: column;
-
-          .comments__label {
-            @include label;
-
-            .comments__name {
-              @include field;
-              margin: 4px 0px 16px 0px;
-            }
-            .comments__comment {
-              resize: none;
-              @include field;
-              margin: 4px 0px 16px 0px;
-            }
+          &.comments__avatar--main {
+            background-image: url(../assets/Images/Mohan-muruge.jpg);
           }
-          .comments__btn {
-            @include button;
+
+          @include tablet {
+            width: 3rem;
+            height: 3rem;
           }
         }
+
+        .comments__form-box {
+          width: 100%;
+
+          .comments__form {
+            display: flex;
+            flex-direction: column;
+
+            .comments__label {
+              @include label;
+
+              .comments__name {
+                @include field;
+                margin: 4px 0px 16px 0px;
+              }
+              .comments__comment {
+                resize: none;
+                @include field;
+                margin: 4px 0px 16px 0px;
+              }
+            }
+            .comments__btn {
+              @include button;
+            }
+          }
+        }
       }
     }
-    .comments__list {
+    .list {
+      padding: 0;
 
-      .comments__li {
+      .list__item {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        @include divider;
 
+        .list__avatar {
+          background-color: $Mercury;
+          height: 2.25rem;
+          width: 2.25rem;
+          background-position: center left;
+          background-size: cover;
+          border-radius: 50%;
+          margin: 1rem 1rem 0rem 0rem;
+
+          @include tablet {
+            width: 3rem;
+            height: 3rem;
+          }
+        }
+        .list__info-box {
+
+          .list__head {
+            display: flex;
+            justify-content: space-between;
+            .list__name {
+              font-family: 'AvenirNextLT-demi', Arial, sans-serif;
+            }
+            .list__date {
+              color: $Silver;
+            }
+          }
+        }
+        .list__comment {
+          margin: 0rem 0rem 1rem 0rem;
+        }
       }
     }
   }

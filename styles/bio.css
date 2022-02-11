@@ -131,7 +131,7 @@ body {
   border-bottom: 4px solid #FFF;
 }
 .header__wrapper nav .nav__list .nav__item.nav__item--active .nav__link {
-  font-family: "AvenirNextLT-demi";
+  font-family: "AvenirNextLT-demi", Arial, sans-serif;
   color: #FFF;
 }
 .header__wrapper nav .nav__list .nav__item.nav__item:hover {
@@ -224,7 +224,7 @@ body {
 }
 .about .about__subwrapper .quote {
   font-size: 1rem;
-  font-family: "AvenirNextLT-demi";
+  font-family: "AvenirNextLT-demi", Arial, sans-serif;
 }
 @media (min-width: 768px) {
   .about .about__subwrapper .quote {
@@ -316,18 +316,18 @@ body {
 }
 
 .comments {
-  padding: 1rem;
+  padding: 0rem 1rem;
 }
-.comments .comments__wrapper {
+.comments .comments__wrapper .comments__top {
   border-bottom: 1px solid #E1E1E1;
+  padding-bottom: 1rem;
 }
-.comments .comments__wrapper .comments__container {
+.comments .comments__wrapper .comments__top .comments__container {
   display: flex;
   justify-content: flex-start;
 }
-.comments .comments__wrapper .comments__container .comments__avatar {
+.comments .comments__wrapper .comments__top .comments__container .comments__avatar {
   background-color: #E1E1E1;
-  background-image: url(../assets/Images/Mohan-muruge.jpg);
   height: 2.25rem;
   width: 2.25rem;
   background-position: center left;
@@ -335,20 +335,23 @@ body {
   border-radius: 50%;
   margin: 1.375rem 1rem 0rem 0rem;
 }
+.comments .comments__wrapper .comments__top .comments__container .comments__avatar.comments__avatar--main {
+  background-image: url(../assets/Images/Mohan-muruge.jpg);
+}
 @media (min-width: 768px) {
-  .comments .comments__wrapper .comments__container .comments__avatar {
+  .comments .comments__wrapper .comments__top .comments__container .comments__avatar {
     width: 3rem;
     height: 3rem;
   }
 }
-.comments .comments__wrapper .comments__container .comments__form-box {
+.comments .comments__wrapper .comments__top .comments__container .comments__form-box {
   width: 100%;
 }
-.comments .comments__wrapper .comments__container .comments__form-box .comments__form {
+.comments .comments__wrapper .comments__top .comments__container .comments__form-box .comments__form {
   display: flex;
   flex-direction: column;
 }
-.comments .comments__wrapper .comments__container .comments__form-box .comments__form .comments__label {
+.comments .comments__wrapper .comments__top .comments__container .comments__form-box .comments__form .comments__label {
   display: flex;
   flex-direction: column;
   color: #AFAFAF;
@@ -356,7 +359,7 @@ body {
   font-family: "AvenirNextLT-demi";
   font-size: 0.75rem;
 }
-.comments .comments__wrapper .comments__container .comments__form-box .comments__form .comments__label .comments__name {
+.comments .comments__wrapper .comments__top .comments__container .comments__form-box .comments__form .comments__label .comments__name {
   min-height: 2.25rem;
   width: 100%;
   border-radius: 4px;
@@ -368,12 +371,12 @@ body {
   margin: 4px 0px 16px 0px;
 }
 @media (min-width: 768px) {
-  .comments .comments__wrapper .comments__container .comments__form-box .comments__form .comments__label .comments__name {
+  .comments .comments__wrapper .comments__top .comments__container .comments__form-box .comments__form .comments__label .comments__name {
     min-height: 3rem;
     padding: 1rem;
   }
 }
-.comments .comments__wrapper .comments__container .comments__form-box .comments__form .comments__label .comments__comment {
+.comments .comments__wrapper .comments__top .comments__container .comments__form-box .comments__form .comments__label .comments__comment {
   resize: none;
   min-height: 2.25rem;
   width: 100%;
@@ -386,12 +389,12 @@ body {
   margin: 4px 0px 16px 0px;
 }
 @media (min-width: 768px) {
-  .comments .comments__wrapper .comments__container .comments__form-box .comments__form .comments__label .comments__comment {
+  .comments .comments__wrapper .comments__top .comments__container .comments__form-box .comments__form .comments__label .comments__comment {
     min-height: 3rem;
     padding: 1rem;
   }
 }
-.comments .comments__wrapper .comments__container .comments__form-box .comments__form .comments__btn {
+.comments .comments__wrapper .comments__top .comments__container .comments__form-box .comments__form .comments__btn {
   height: 3rem;
   text-transform: uppercase;
   background-color: #323232;
@@ -401,6 +404,44 @@ body {
   border-radius: 4px;
   border-color: #323232;
 }
+.comments .comments__wrapper .list {
+  padding: 0;
+}
+.comments .comments__wrapper .list .list__item {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #E1E1E1;
+}
+.comments .comments__wrapper .list .list__item .list__avatar {
+  background-color: #E1E1E1;
+  height: 2.25rem;
+  width: 2.25rem;
+  background-position: center left;
+  background-size: cover;
+  border-radius: 50%;
+  margin: 1rem 1rem 0rem 0rem;
+}
+@media (min-width: 768px) {
+  .comments .comments__wrapper .list .list__item .list__avatar {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+.comments .comments__wrapper .list .list__item .list__info-box .list__head {
+  display: flex;
+  justify-content: space-between;
+}
+.comments .comments__wrapper .list .list__item .list__info-box .list__head .list__name {
+  font-family: "AvenirNextLT-demi", Arial, sans-serif;
+}
+.comments .comments__wrapper .list .list__item .list__info-box .list__head .list__date {
+  color: #AFAFAF;
+}
+.comments .comments__wrapper .list .list__item .list__comment {
+  margin: 0rem 0rem 1rem 0rem;
+}
+
 footer {
   background-color: #323232;
   color: #FFF;

@@ -73,21 +73,48 @@
     <!-- COMMENTS SECTION AKA JOIN THE CONVERSATION -->
     <section class="comments">
       <div class="comments__wrapper">
-        <h2 class="comments__title subheader">Join the Conversation</h2>
-        <div class="comments__container">
-          <div class="comments__avatar-box">
-            <div class="comments__avatar"></div>
-          </div>
-          <div class="comments__form-box">
-            <form class="comments__form">
-              <label class="comments__label">Name<input class="comments__name" type="text" name="user_name" placeholder="Enter your name"></label>
-              <label class="comments__label">Comment<textarea class="comments__comment" name="user__comment" placeholder="Add a new comment"></textarea></label>
-              <button class="comments__btn" type="button">Comment</button>
-            </form>
+        <div class="comments__top">
+          <h2 class="comments__title subheader">Join the Conversation</h2>
+          <div class="comments__container">
+            <div class="comments__avatar-box">
+              <div class="comments__avatar comments__avatar--main"></div>
+            </div>
+            <div class="comments__form-box">
+              <form class="comments__form">
+                <label class="comments__label">Name<input class="comments__name" type="text" name="user_name" placeholder="Enter your name"></label>
+                <label class="comments__label">Comment<textarea class="comments__comment" name="user__comment" placeholder="Add a new comment"></textarea></label>
+                <button class="comments__btn" type="button">Comment</button>
+              </form>
+            </div>
           </div>
         </div>
         <!-- TO INSERT COMMENTS DYNAMICALLY IN JS -->
-        <ul class="comments__list"></ul>
+        <ul class="list">
+          <li class="list__item">
+            <div class="list__avatar-box">
+              <div class="list__avatar"></div>
+            </div>
+            <div class="list__info-box">
+              <div class="list__head">
+                <p class="list__name">Connor Walton</p>
+                <p class="list__date">02/17/2021</p>
+              </div>
+              <p class="list__comment">This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.</p>
+            </div>
+          </li>
+          <li class="list__item">
+            <div class="list__avatar-box">
+              <div class="list__avatar"></div>
+            </div>
+            <div class="list__info-box">
+              <div class="list__head">
+                <p class="list__name">Connor Walton</p>
+                <p class="list__date">02/17/2021</p>
+              </div>
+              <p class="list__comment">This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.</p>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
