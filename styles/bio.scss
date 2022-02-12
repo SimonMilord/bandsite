@@ -216,6 +216,7 @@ body {
     .quote {
       font-size: 1rem;
       font-family: 'AvenirNextLT-demi', Arial, sans-serif;
+      line-height: 1.5rem;
       @include tablet {
         font-size: 1.5rem;
         line-height: 2rem;
@@ -223,6 +224,7 @@ body {
       @include desktop {
         max-width: 80%;
       }
+
       .quote__credit {
         @include tablet {
           font-size: 1.25rem;
@@ -307,18 +309,32 @@ body {
 
 .comments {
   padding: 0rem 1rem;
+  @include tablet {
+    padding: 2.25rem;
+  }
   .comments__wrapper {
 
     .comments__top {
-      @include divider;
-      padding-bottom: 1rem;
 
       .comments__title {
-
+        @include tablet {
+          @include tablet-subheader;
+          margin: 0.75rem 0rem 2.25rem 0rem;
+        }
       }
       .comments__container {
         display: flex;
         justify-content: flex-start;
+        padding-bottom: 1rem;
+
+        @include tablet {
+          width: 85%;
+          margin: 0 auto;
+        }
+        @include desktop {
+          width: 50%;
+          margin: 0 auto;
+        }
 
         .comments__avatar {
           background-color: $Mercury;
@@ -345,9 +361,11 @@ body {
           .comments__form {
             display: flex;
             flex-direction: column;
+            align-items: flex-end;
 
             .comments__label {
               @include label;
+              width: 100%;
 
               .comments__name {
                 @include field;
@@ -355,12 +373,21 @@ body {
               }
               .comments__comment {
                 resize: none;
+                height: 7rem;
                 @include field;
                 margin: 4px 0px 16px 0px;
               }
             }
             .comments__btn {
+              width: 100%;
               @include button;
+              @include tablet {
+                width: 10rem;
+                padding: 0rem 6rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
             }
           }
         }
@@ -368,6 +395,16 @@ body {
     }
     .list {
       padding: 0;
+      border-top: 1px solid $Mercury;
+
+      @include tablet {
+        width: 80%;
+        margin: 0 auto;
+      }
+      @include desktop {
+        width: 50%;
+        margin: 0 auto;
+      }
 
       .list__item {
         list-style: none;
@@ -485,7 +522,7 @@ footer {
   .card-container {
     @include tablet {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
     }
     .footer-card {
       margin: 1rem 0rem;
@@ -512,7 +549,7 @@ footer {
       .footer-card__email {
         margin: 1.5rem 0rem;
         @include tablet {
-          margin: 2.5rem 0rem;
+          margin: 2rem 0rem;
         }
       }
     }

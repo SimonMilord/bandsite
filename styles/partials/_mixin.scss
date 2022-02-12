@@ -35,6 +35,9 @@
   font-size: 1.125rem;
   border-radius: 4px;
   border-color: $BandSite-Black;
+  &:hover {
+    background-color: $BandSite-DarkBlack;
+  }
 }
 
 @mixin label {

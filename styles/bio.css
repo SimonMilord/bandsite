@@ -225,6 +225,7 @@ body {
 .about .about__subwrapper .quote {
   font-size: 1rem;
   font-family: "AvenirNextLT-demi", Arial, sans-serif;
+  line-height: 1.5rem;
 }
 @media (min-width: 768px) {
   .about .about__subwrapper .quote {
@@ -318,13 +319,34 @@ body {
 .comments {
   padding: 0rem 1rem;
 }
-.comments .comments__wrapper .comments__top {
-  border-bottom: 1px solid #E1E1E1;
-  padding-bottom: 1rem;
+@media (min-width: 768px) {
+  .comments {
+    padding: 2.25rem;
+  }
+}
+@media (min-width: 768px) {
+  .comments .comments__wrapper .comments__top .comments__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    margin: 0.75rem 0rem 2.25rem 0rem;
+  }
 }
 .comments .comments__wrapper .comments__top .comments__container {
   display: flex;
   justify-content: flex-start;
+  padding-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .comments .comments__wrapper .comments__top .comments__container {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1280px) {
+  .comments .comments__wrapper .comments__top .comments__container {
+    width: 50%;
+    margin: 0 auto;
+  }
 }
 .comments .comments__wrapper .comments__top .comments__container .comments__avatar {
   background-color: #E1E1E1;
@@ -350,6 +372,7 @@ body {
 .comments .comments__wrapper .comments__top .comments__container .comments__form-box .comments__form {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
 }
 .comments .comments__wrapper .comments__top .comments__container .comments__form-box .comments__form .comments__label {
   display: flex;
@@ -358,6 +381,7 @@ body {
   text-transform: uppercase;
   font-family: "AvenirNextLT-demi";
   font-size: 0.75rem;
+  width: 100%;
 }
 .comments .comments__wrapper .comments__top .comments__container .comments__form-box .comments__form .comments__label .comments__name {
   min-height: 2.25rem;
@@ -378,6 +402,7 @@ body {
 }
 .comments .comments__wrapper .comments__top .comments__container .comments__form-box .comments__form .comments__label .comments__comment {
   resize: none;
+  height: 7rem;
   min-height: 2.25rem;
   width: 100%;
   border-radius: 4px;
@@ -395,6 +420,7 @@ body {
   }
 }
 .comments .comments__wrapper .comments__top .comments__container .comments__form-box .comments__form .comments__btn {
+  width: 100%;
   height: 3rem;
   text-transform: uppercase;
   background-color: #323232;
@@ -404,8 +430,33 @@ body {
   border-radius: 4px;
   border-color: #323232;
 }
+.comments .comments__wrapper .comments__top .comments__container .comments__form-box .comments__form .comments__btn:hover {
+  background-color: #000;
+}
+@media (min-width: 768px) {
+  .comments .comments__wrapper .comments__top .comments__container .comments__form-box .comments__form .comments__btn {
+    width: 10rem;
+    padding: 0rem 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .comments .comments__wrapper .list {
   padding: 0;
+  border-top: 1px solid #E1E1E1;
+}
+@media (min-width: 768px) {
+  .comments .comments__wrapper .list {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1280px) {
+  .comments .comments__wrapper .list {
+    width: 50%;
+    margin: 0 auto;
+  }
 }
 .comments .comments__wrapper .list .list__item {
   list-style: none;
@@ -523,7 +574,7 @@ footer .top-footer .logo {
 @media (min-width: 768px) {
   footer .card-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 }
 footer .card-container .footer-card {
@@ -549,7 +600,7 @@ footer .card-container .footer-card .footer-card__email {
 }
 @media (min-width: 768px) {
   footer .card-container .footer-card .footer-card__email {
-    margin: 2.5rem 0rem;
+    margin: 2rem 0rem;
   }
 }
 footer .bottom-footer {

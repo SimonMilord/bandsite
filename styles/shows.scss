@@ -127,7 +127,6 @@
     .shows__sub-container {
       margin: 1rem;
 
-
       .shows__title {
         margin: 2rem 0rem;
       }
@@ -139,8 +138,18 @@
           @include divider;
           margin-bottom: 1rem;
 
+          &.list__item:hover {
+            background-color: $Alabaster;
+          }
+          &.list__item--active {
+            background-color: $Mercury;
+          }
+
           .list__label {
             @include label;
+            &.list__item--active {
+              background-color: $Mercury;
+            }
           }
 
           .list__info {

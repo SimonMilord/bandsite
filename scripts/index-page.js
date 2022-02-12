@@ -110,6 +110,6 @@ function sortCommentsByDate() {
   commentsArray.sort((objectA, objectB) => {
     return objectB.date - objectA.date;
   });
-}
+};
 
 renderComments();

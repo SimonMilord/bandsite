@@ -13,7 +13,7 @@
 
 ##### The Bees Knees
 
-The Bees Knees is a pop rock band originating from San Francisco, California. The band consists of lead vocalist Bryan Teddy, guitarist Mack Tolkens, guitarist Andrew Green, bassist Kent Zulkee and drummer Freddie Fischer. The band achieved its first commercial success as an unsigned act, drawing attention from manager Cam Adams. Having worked with other popular acts (The Elephant In The Room, One Trick Pony, The Cat’s Meow), Adams was confident the band could succeed even further, pushing them to sign with Magenta Records. 
+The Bees Knees is a pop rock band originating from San Francisco, California. The band consists of lead vocalist Bryan Teddy, guitarist Mack Tolkens, guitarist Andrew Green, bassist Kent Zulkee and drummer Freddie Fischer. The band achieved its first commercial success as an unsigned act, drawing attention from manager Cam Adams. Having worked with other popular acts (The Elephant In The Room, One Trick Pony, The Cat’s Meow), Adams was confident the band could succeed even further, pushing them to sign with Magenta Records.
 
 From there, the band has soared, gaining international recognition and ranking in the top 10 on the Poster Charts. New fans immediately fell in love with the band’s original and organic attitude, solidifying their place as one of the hottest and fastest up and coming acts of this century. Fans affectionately refer to themselves as “The Hive” and are drawn to their candid and authentic performances on stage. Looking forward to touring in the future, The Bees Knees are currently recording their second studio album, looking to be released in late 2021.
 
@@ -91,7 +91,7 @@ cwhyte@archentertainment.com
 ###### Copyright The Bees Knees © 2021 All Rights Reserved
 
 
-## 
+##
 
 
 ## Shows
@@ -104,41 +104,41 @@ Queen of Yellow x For The Stings
 #### Dates \
 Venue \
 Location
+<!--
+Mon Sept 06 2021
 
-Mon Sept 06 2021 
+Ronald Lane
 
-Ronald Lane 
+San Francisco, CA -->
 
-San Francisco, CA
+<!-- Tue Sept 21 2021
 
-Tue Sept 21 2021 
+Pier 3 East
 
-Pier 3 East 
+San Francisco, CA  -->
 
-San Francisco, CA 
+<!-- Fri Oct 15 2021
 
-Fri Oct 15 2021 
+View Lounge
 
-View Lounge 
+San Francisco, CA  -->
 
-San Francisco, CA 
+<!-- Sat Nov 06 2021
 
-Sat Nov 06 2021 
+Hyatt Agency
 
-Hyatt Agency 
+San Francisco, CA  -->
 
-San Francisco, CA 
+<!-- Fri Nov 26 2021
 
-Fri Nov 26 2021
+Moscow Center
 
-Moscow Center 
+San Francisco, CA -->
 
-San Francisco, CA 
+<!-- Wed Dec 15 2021
 
-Wed Dec 15 2021 
+Press Club
 
-Press Club 
-
-San Francisco, CA
+San Francisco, CA -->
 
 Buy Tickets

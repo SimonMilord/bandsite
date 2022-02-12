@@ -140,6 +140,12 @@
   border-bottom: 1px solid #E1E1E1;
   margin-bottom: 1rem;
 }
+.shows .shows__wrapper .shows__sub-container .list .list__item.list__item:hover {
+  background-color: #FAFAFA;
+}
+.shows .shows__wrapper .shows__sub-container .list .list__item.list__item--active {
+  background-color: #E1E1E1;
+}
 .shows .shows__wrapper .shows__sub-container .list .list__item .list__label {
   display: flex;
   flex-direction: column;
@@ -147,6 +153,9 @@
   text-transform: uppercase;
   font-family: "AvenirNextLT-demi";
   font-size: 0.75rem;
+}
+.shows .shows__wrapper .shows__sub-container .list .list__item .list__label.list__item--active {
+  background-color: #E1E1E1;
 }
 .shows .shows__wrapper .shows__sub-container .list .list__item .list__info {
   text-transform: capitalize;
@@ -169,6 +178,9 @@
   border-radius: 4px;
   border-color: #323232;
   margin-bottom: 1rem;
+}
+.shows .shows__wrapper .shows__sub-container .list .list__item .list__btn:hover {
+  background-color: #000;
 }
 @media (min-width: 768px) {
   .shows .shows__wrapper .shows__sub-container .list .list__item .list__btn {
