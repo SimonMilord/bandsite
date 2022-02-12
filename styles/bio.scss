@@ -375,21 +375,27 @@ body {
         flex-direction: row;
         @include divider;
 
-        .list__avatar {
-          background-color: $Mercury;
-          height: 2.25rem;
-          width: 2.25rem;
-          background-position: center left;
-          background-size: cover;
-          border-radius: 50%;
-          margin: 1rem 1rem 0rem 0rem;
+        .list__avatar-box {
+          margin-top: 0;
 
-          @include tablet {
-            width: 3rem;
-            height: 3rem;
+          .list__avatar {
+            background-color: $Mercury;
+            height: 2.25rem;
+            width: 2.25rem;
+            background-position: center left;
+            background-size: cover;
+            border-radius: 50%;
+            margin: 1rem 1rem 0rem 0rem;
+
+            @include tablet {
+              width: 3rem;
+              height: 3rem;
+            }
           }
         }
+
         .list__info-box {
+          width: 100%;
 
           .list__head {
             display: flex;

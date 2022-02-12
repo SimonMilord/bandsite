@@ -413,7 +413,10 @@ body {
   flex-direction: row;
   border-bottom: 1px solid #E1E1E1;
 }
-.comments .comments__wrapper .list .list__item .list__avatar {
+.comments .comments__wrapper .list .list__item .list__avatar-box {
+  margin-top: 0;
+}
+.comments .comments__wrapper .list .list__item .list__avatar-box .list__avatar {
   background-color: #E1E1E1;
   height: 2.25rem;
   width: 2.25rem;
@@ -423,10 +426,13 @@ body {
   margin: 1rem 1rem 0rem 0rem;
 }
 @media (min-width: 768px) {
-  .comments .comments__wrapper .list .list__item .list__avatar {
+  .comments .comments__wrapper .list .list__item .list__avatar-box .list__avatar {
     width: 3rem;
     height: 3rem;
   }
+}
+.comments .comments__wrapper .list .list__item .list__info-box {
+  width: 100%;
 }
 .comments .comments__wrapper .list .list__item .list__info-box .list__head {
   display: flex;
