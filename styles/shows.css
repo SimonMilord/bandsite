@@ -86,7 +86,7 @@
 }
 .hero .hero__container .hero__album {
   color: #FFF;
-  font-family: "AvenirNextLT-demi";
+  font-family: "AvenirNextLT-regular";
   margin: 0;
 }
 @media (min-width: 768px) {
@@ -118,11 +118,11 @@
   flex-direction: column;
   height: 10rem;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
 }
 @media (min-width: 1280px) {
   .hero .hero__soundcloud {
-    max-width: 500px;
+    max-width: 450px;
   }
 }
 

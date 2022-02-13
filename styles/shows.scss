@@ -15,7 +15,6 @@
   background-image: url(../assets/Images/hero-shows.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  // height: 17rem;
   height: 25rem;
   @include tablet {
     height: 70vh;
@@ -77,7 +76,7 @@
 
     .hero__album {
       color: $White;
-      font-family: "AvenirNextLT-demi";
+      font-family: "AvenirNextLT-regular";
       margin: 0;
 
       @include tablet {
@@ -109,10 +108,10 @@
     flex-direction: column;
     height: 10rem;
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
 
     @include desktop {
-      max-width: 500px;
+      max-width: 450px;
     }
   }
 }
