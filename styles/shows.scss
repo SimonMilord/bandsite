@@ -117,38 +117,89 @@
   }
 }
 
-
 // SHOWS SECTION STYLING
 
 .shows {
 
   .shows__wrapper {
+    @include desktop {
+      display: flex;
+    }
+    .shows__title {
+      margin: 2rem 0rem;
+      @include tablet-subheader;
+      margin: 1rem;
+      @include tablet {
+        margin: 2rem;
+      }
+      @include desktop {
+        margin: 3.5rem 0rem;
+      }
+    }
 
     .shows__sub-container {
       margin: 1rem;
-
-      .shows__title {
-        margin: 2rem 0rem;
+      @include tablet {
+        margin: 2rem;
       }
+      @include desktop {
+        margin: 2rem 0rem 2rem 5rem;
+        width: 100%;
+      }
+
+      .shows__label-box {
+        display: none;
+        @include tablet {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+        }
+        @include desktop {
+          margin-bottom: 2rem;
+          margin-top: 3rem;
+        }
+
+        .shows__top-label {
+          display: none;
+          @include label;
+          @include tablet {
+            display: flex;
+            width: 25%;
+            margin: 0rem;
+            font-size: 0.875rem;
+          }
+        }
+      }
+
       .list {
         list-style: none;
         padding-left: 0;
+        @include tablet {
+          margin-top: 0;
+        }
 
         .list__item {
           @include divider;
           margin-bottom: 1rem;
+          @include tablet {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 0;
+          }
 
           &.list__item:hover {
             background-color: $Alabaster;
           }
-          &.list__item--active {
+          &.list__item:focus {
             background-color: $Mercury;
           }
 
           .list__label {
             @include label;
-            &.list__item--active {
-              background-color: $Mercury;
+            @include tablet {
+              width: 25%;
+              color: $White;
             }
           }
 
@@ -170,8 +221,10 @@
             margin-bottom: 1rem;
 
             @include tablet {
-              min-width: 150px;
-              padding: 0 32px 0 32px;
+              min-width: 9.375rem;
+              padding: 0 2rem 0 2rem;
+              width: 25%;
+              margin-bottom: 0;
             }
           }
         }

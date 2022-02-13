@@ -112,9 +112,3 @@ function sortShowsByDate() {
   });
 };
 
-const showsListItem = document.querySelector('.list__item');
-
-// event listener for the selected list item ---------- TO FIX!!!
-showsListItem.addEventListener('click', (event) => {
-  event.target.classList.add('list__item--active');
-});

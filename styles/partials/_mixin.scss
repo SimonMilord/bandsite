@@ -32,9 +32,13 @@
   background-color: $BandSite-Black;
   color: $White;
   font-family: 'AvenirNextLT-demi';
-  font-size: 1.125rem;
+  font-size: 16px;
   border-radius: 4px;
   border-color: $BandSite-Black;
+  min-width: 9.375rem;
+  @include tablet {
+    max-width: 12.5rem;
+  }
   &:hover {
     background-color: $BandSite-DarkBlack;
   }
