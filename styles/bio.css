@@ -419,8 +419,8 @@ body {
     padding: 1rem;
   }
 }
-.comments .comments__wrapper .comments__top .comments__container .comments__form-box .comments__form .comments__label .comments__comment.comments__comment:focus, .comments .comments__wrapper .comments__top .comments__container .comments__form-box .comments__form .comments__label .comments__comment textarea:focus {
-  border-color: #323232;
+.comments .comments__wrapper .comments__top .comments__container .comments__form-box .comments__form .comments__label .comments__comment.comments__comment:focus {
+  border-color: red;
 }
 .comments .comments__wrapper .comments__top .comments__container .comments__form-box .comments__form .comments__btn {
   width: 100%;

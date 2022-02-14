@@ -53,6 +53,7 @@ function renderShows() {
     // create li with class list__item
     const showsLi = document.createElement('li');
     showsLi.classList.add('list__item');
+    showsLi.setAttribute('tabindex', '1');
 
     // create label with class list__label (date)
     const showsLabelDate = document.createElement('label');

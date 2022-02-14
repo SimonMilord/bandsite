@@ -377,8 +377,8 @@ body {
                 @include field;
                 margin: 4px 0px 16px 0px;
 
-                &.comments__comment:focus, textarea:focus {
-                  border-color: $BandSite-Black;
+                &.comments__comment:focus {
+                  border-color: red;
                 }
               }
             }

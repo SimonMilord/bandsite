@@ -122,7 +122,7 @@
 }
 @media (min-width: 1280px) {
   .hero .hero__soundcloud {
-    max-width: 450px;
+    max-width: 28.125rem;
   }
 }
 
