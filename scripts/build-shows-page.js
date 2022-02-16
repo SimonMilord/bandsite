@@ -40,6 +40,14 @@ const showsArray = [
 const showsList = document.querySelector('.list');
 renderShows();
 
+// function that creates html element, add class and innertext to be appended
+function create(element, className, text = null) {
+  const domLm = document.createElement(element);
+  domLm.classList.add(className);
+  if (text !== null) domLm.innerText = text;
+  return domLm;
+}
+
 // render shows
 function renderShows() {
   sortShowsByDate();
@@ -51,49 +59,47 @@ function renderShows() {
 
   showsArray.forEach((show) => {
     // create li with class list__item
-    const showsLi = document.createElement('li');
-    showsLi.classList.add('list__item');
+    const showsLi = create('li', 'list__item');
     showsLi.setAttribute('tabindex', '1');
 
-    // create label with class list__label (date)
-    const showsLabelDate = document.createElement('label');
-    showsLabelDate.classList.add('list__label');
-    showsLabelDate.innerText = date;
-
+    // create label with class list__label (date)       --- DATE ---
+    // const showsLabelDate = create('label', 'list__label', date);
+    const showsLabelDate = create('label', 'list__label');
+    // create span to remove the said labe when tablet +
+    const showsSpanDate = create('span', 'list__span', date);
     // create p with class list__info
-    const showsPDate = document.createElement('p');
-    showsPDate.classList.add('list__info', 'list__info--date');
-    // showsPDate.innerText = new Date(show.date).toLocaleDateString();
-    showsPDate.innerText = new Date(show.date).toDateString();
+    const showsPDate = create('p', 'list__info', new Date(show.date).toDateString());
+    showsPDate.classList.add('list__info--date');
 
-    // create label with class list__label (venue)
-    const showsLabelVenue = document.createElement('label');
-    showsLabelVenue.classList.add('list__label');
-    showsLabelVenue.innerText = venue;
 
+    // create label with class list__label (venue)      --- VENUE ---
+    const showsLabelVenue = create('label', 'list__label');
+    // create span to remove the said label when tablet +
+    const showsSpanVenue = create('span', 'list__span', venue);
     // create p with class list__info
-    const showsPVenue = document.createElement('p');
-    showsPVenue.classList.add('list__info');
-    showsPVenue.innerText = show.venue;
+    const showsPVenue = create('p', 'list__info', show.venue);
 
-    // create label with class list__label (location)
-    const showsLabelLocation = document.createElement('label');
-    showsLabelLocation.classList.add('list__label');
-    showsLabelLocation.innerText = location;
 
+    // create label with class list__label (location)    --- LOCATION ---
+    const showsLabelLocation = create('label', 'list__label');
+    // create span to remove label
+    const showsSpanLocation = create('span', 'list__span', location);
     // create p with class list__info
-    const showsPLocation = document.createElement('p');
-    showsPLocation.classList.add('list__info');
-    showsPLocation.innerText = show.location;
+    const showsPLocation = create('p', 'list__info', show.location);
 
-    // create button with class list__btn
-    const showsButton = document.createElement('button');
-    showsButton.classList.add('list__btn');
-    showsButton.innerText = button;
+
+    // create button with class list__btn                 --- COMMENT BUTTON ---
+    const showsButton = create('button', 'list__btn', button);
+    showsButton.setAttribute('tabindex', '1');
 
     // append all elements to their parents
+    showsLabelDate.appendChild(showsSpanDate);
     showsLabelDate.appendChild(showsPDate);
+
+    showsLabelVenue.appendChild(showsSpanVenue);
     showsLabelVenue.appendChild(showsPVenue);
+
+    showsLabelLocation.appendChild(showsSpanLocation);
     showsLabelLocation.appendChild(showsPLocation);
 
     showsLi.appendChild(showsLabelDate);
@@ -104,7 +110,6 @@ function renderShows() {
     showsList.appendChild(showsLi);
   });
 };
-
 
 // sorts the array by oldest date to newest
 function sortShowsByDate() {

@@ -400,6 +400,9 @@ body {
     padding: 1rem;
   }
 }
+.comments .comments__wrapper .comments__top .comments__container .comments__form-box .comments__form .comments__label .comments__name.comments__name {
+  outline-color: #323232;
+}
 .comments .comments__wrapper .comments__top .comments__container .comments__form-box .comments__form .comments__label .comments__comment {
   resize: none;
   height: 7rem;
@@ -420,7 +423,7 @@ body {
   }
 }
 .comments .comments__wrapper .comments__top .comments__container .comments__form-box .comments__form .comments__label .comments__comment.comments__comment:focus {
-  border-color: red;
+  outline-color: #323232;
 }
 .comments .comments__wrapper .comments__top .comments__container .comments__form-box .comments__form .comments__btn {
   width: 100%;

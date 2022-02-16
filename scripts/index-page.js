@@ -41,14 +41,13 @@ function displayComment(commentObject) {
   renderComments();
 }
 
-// let para = ['commentsLi'];
-
-// function create(para, element, className) {
-//   para = document.createElement(element);
-//   para.classList.add(className);
-//   // console.log(para);
-// }
-// console.log(create(para[0], 'li', 'list__item'));
+// function that creates html element, add class and innertext to be appended
+function create(element, className, text = null) {
+  const domLm = document.createElement(element);
+  domLm.classList.add(className);
+  if (text !== null) domLm.innerText = text;
+  return domLm;
+}
 
 function renderComments() {
   sortCommentsByDate();
@@ -56,39 +55,28 @@ function renderComments() {
 
   commentsArray.forEach((comment) => {
     // create li with class list__item
-    const commentsLi = document.createElement('li');
-    commentsLi.classList.add('list__item');
+    const commentsLi = create('li', 'list__item');
 
     // create div with class list__avatar-box
-    const avatarBox = document.createElement('div');
-    avatarBox.classList.add('list__avatar-box');
+    const avatarBox = create('div', 'list__avatar-box');
 
     // create div with class list__avatar
-    const avatar = document.createElement('div');
-    avatar.classList.add('list__avatar');
+    const avatar = create('div', 'list__avatar');
 
     // create div with class list__info-box
-    const infoBox = document.createElement('div');
-    infoBox.classList.add('list__info-box');
+    const infoBox = create('div', 'list__info-box');
 
     // create div with class list__head
-    const head = document.createElement('div');
-    head.classList.add('list__head');
+    const head = create('div', 'list__head');
 
     // create div with class list__name
-    const name = document.createElement('p');
-    name.classList.add('list__name');
-    name.innerText = comment.name;
+    const name = create('p', 'list__name', comment.name);
 
     // create div with class list__date
-    const date = document.createElement('p');
-    date.classList.add('list__date');
-    date.innerText = new Date(comment.date).toLocaleDateString();
+    const date = create('p', 'list__date', new Date(comment.date).toLocaleDateString());
 
     // create div with class list__comment
-    const commentP = document.createElement('p');
-    commentP.classList.add('list__comment');
-    commentP.innerText = comment.commentText;
+    const commentP = create('p', 'list__comment', comment.commentText);
 
     // append all elements to their respective parents (in order of nesting)
     head.appendChild(name);

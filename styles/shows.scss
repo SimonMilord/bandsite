@@ -185,6 +185,7 @@
             flex-direction: row;
             align-items: center;
             margin-bottom: 0;
+            padding: 1rem;
           }
 
           &.list__item:hover {
@@ -199,20 +200,23 @@
             @include tablet {
               width: 25%;
               color: $White;
+
+              .list__span {
+                display: none;
+              }
+            }
+            .list__info {
+              text-transform: capitalize;
+              color: $BandSite-DarkBlack;
+              font-family: 'AvenirNextLT-regular', Arial, sans-serif;
+              font-size: 1rem;
+
+              &--date {
+                font-family: "AvenirNextLT-demi";
+              }
             }
           }
 
-          .list__info {
-            text-transform: capitalize;
-            color: $BandSite-DarkBlack;
-            font-family: 'AvenirNextLT-regular', Arial, sans-serif;
-            font-size: 1rem;
-            margin: 16px 0px 24px 0px;
-
-            &--date {
-              font-family: "AvenirNextLT-demi";
-            }
-          }
 
           .list__btn {
             width: 100%;

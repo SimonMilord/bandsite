@@ -370,6 +370,10 @@ body {
               .comments__name {
                 @include field;
                 margin: 4px 0px 16px 0px;
+
+                &.comments__name {
+                  outline-color: $BandSite-Black;
+                };
               }
               .comments__comment {
                 resize: none;
@@ -378,7 +382,7 @@ body {
                 margin: 4px 0px 16px 0px;
 
                 &.comments__comment:focus {
-                  border-color: red;
+                  outline-color: $BandSite-Black;
                 }
               }
             }
@@ -432,6 +436,7 @@ body {
               width: 3rem;
               height: 3rem;
             }
+
           }
         }
 
