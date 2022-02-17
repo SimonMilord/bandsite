@@ -1,28 +1,44 @@
+// API KEY:
+
+const ApiKey = {"api_key":"0ce694ad-dd06-4c73-a317-283414a7c453"};
+
 // default comments array of objects
-const commentsArray = [
-  {
-    name: 'Connor Walton',
-    date: 1613538000000,
-    commentText: 'This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.',
-  },
-  {
-    name: 'Emilie Beach',
-    date: 1610168400000,
-    commentText: 'I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.',
-  },
-  {
-    name: 'Miles Acosta',
-    date: 1607749200000,
-    commentText: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-  },
-];
+// const commentsArray = [
+//   {
+//     name: 'Connor Walton',
+//     date: 1613538000000,
+//     commentText: 'This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.',
+//   },
+//   {
+//     name: 'Emilie Beach',
+//     date: 1610168400000,
+//     commentText: 'I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.',
+//   },
+//   {
+//     name: 'Miles Acosta',
+//     date: 1607749200000,
+//     commentText: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
+//   },
+// ];
+
+// AXIOS GET request
+const commentsArray = axios.get(`https://project-1-api.herokuapp.com/comments?api_key=${ApiKey}`)
+function getComments() {
+  commentsArray.then(result => {
+    // console.log(result.data);
+    renderComments();
+  }).catch(error => {
+    console.log(error);
+  });
+}
+
+getComments();
 
 // gather DOM elements
 const commentsForm = document.querySelector('.comments__form');
 const commentsName = document.querySelector('.comments__name');
 const commentsComment = document.querySelector('.comments__comment');
 const commentsList = document.querySelector('.list');
-
 
 // form event listener : submit
 commentsForm.addEventListener('submit', event => {
@@ -41,7 +57,7 @@ function displayComment(commentObject) {
   renderComments();
 }
 
-// function that creates html element, add class and innertext to be appended
+// creates html element, add class and innertext to be appended
 function create(element, className, text = null) {
   const domLm = document.createElement(element);
   domLm.classList.add(className);

@@ -1,3 +1,9 @@
+// API KEY:
+
+const ApiKey = {"api_key":"0ce694ad-dd06-4c73-a317-283414a7c453"};
+
+// full get request API comments: https://project-1-api.herokuapp.com/comments?api_key=0ce694ad-dd06-4c73-a317-283414a7c453
+
 // date converter:
 const newDate = Date.parse('Wed Dec 15 2021');
 console.log(newDate);
