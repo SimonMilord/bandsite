@@ -167,7 +167,7 @@
 @media (min-width: 768px) {
   .shows .shows__wrapper .shows__sub-container .shows__label-box {
     display: flex;
-    justify-content: space-between;
+    padding: 1rem;
     width: 100%;
   }
 }

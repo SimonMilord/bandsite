@@ -1,62 +1,51 @@
 // API KEY:
-
 const ApiKey = {"api_key":"0ce694ad-dd06-4c73-a317-283414a7c453"};
 
-// default comments array of objects
-// const commentsArray = [
-//   {
-//     name: 'Connor Walton',
-//     date: 1613538000000,
-//     commentText: 'This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.',
-//   },
-//   {
-//     name: 'Emilie Beach',
-//     date: 1610168400000,
-//     commentText: 'I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.',
-//   },
-//   {
-//     name: 'Miles Acosta',
-//     date: 1607749200000,
-//     commentText: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-//   },
-// ];
-
-// AXIOS GET request
-const commentsArray = axios.get(`https://project-1-api.herokuapp.com/comments?api_key=${ApiKey}`)
-function getComments() {
-  commentsArray.then(result => {
-    // console.log(result.data);
-    renderComments();
-  }).catch(error => {
-    console.log(error);
-  });
-}
-
-getComments();
-
-// gather DOM elements
+// gather DOM elements and variables
 const commentsForm = document.querySelector('.comments__form');
 const commentsName = document.querySelector('.comments__name');
 const commentsComment = document.querySelector('.comments__comment');
 const commentsList = document.querySelector('.list');
+const arr = [];
 
+// AXIOS GET request for comments
+function getComment() {
+  const commentsObject = axios.get(`https://project-1-api.herokuapp.com/comments?api_key=${ApiKey}`)
+  commentsObject.then(result => {
+    const commentsArray = result.data;
+    renderComments(commentsArray);
+  }).catch(error => {
+    console.log(error);
+  });
+}
+getComment();
 // form event listener : submit
 commentsForm.addEventListener('submit', event => {
   event.preventDefault();
-  displayComment({
-    name: event.target.userName.value,
-    date: Date.now(),
-    commentText: event.target.userComment.value,
-  });
+  postComment(event.target.userName.value, event.target.userComment.value);
   event.target.reset();
 });
 
-// display comments
-function displayComment(commentObject) {
-  commentsArray.push(commentObject);
-  renderComments();
+// AXIOS POST request for comments
+function postComment(name, comment) {
+  axios.post(`https://project-1-api.herokuapp.com/comments?api_key=${ApiKey}`, {
+    name: name,
+    comment: comment,
+  }).then(response => {
+    console.log(response);
+    getComment();
+  }).catch(error => {
+    console.log(error);
+  })
 }
 
+
+// function displayComment(commentObject) {
+//   // arr.push(commentObject);
+//   getComment();
+//   renderComments(arr);
+// }
+console.log(arr);
 // creates html element, add class and innertext to be appended
 function create(element, className, text = null) {
   const domLm = document.createElement(element);
@@ -65,11 +54,11 @@ function create(element, className, text = null) {
   return domLm;
 }
 
-function renderComments() {
-  sortCommentsByDate();
+function renderComments(arr) {
+  sortCommentsByDate(arr);
   commentsList.innerHTML = '';
 
-  commentsArray.forEach((comment) => {
+  arr.forEach((comment) => {
     // create li with class list__item
     const commentsLi = create('li', 'list__item');
 
@@ -89,10 +78,10 @@ function renderComments() {
     const name = create('p', 'list__name', comment.name);
 
     // create div with class list__date
-    const date = create('p', 'list__date', new Date(comment.date).toLocaleDateString());
+    const date = create('p', 'list__date', new Date(comment.timestamp).toLocaleDateString());
 
     // create div with class list__comment
-    const commentP = create('p', 'list__comment', comment.commentText);
+    const commentP = create('p', 'list__comment', comment.comment);
 
     // append all elements to their respective parents (in order of nesting)
     head.appendChild(name);
@@ -109,11 +98,10 @@ function renderComments() {
   });
 };
 
-// sorts the array by newest comments to older comments
-function sortCommentsByDate() {
-  commentsArray.sort((objectA, objectB) => {
-    return objectB.date - objectA.date;
+function sortCommentsByDate(arr) {
+  arr.sort((objectA, objectB) => {
+    return objectB.timestamp - objectA.timestamp;
   });
 };
 
-renderComments();
+renderComments(arr);

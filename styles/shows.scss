@@ -150,7 +150,7 @@
         display: none;
         @include tablet {
           display: flex;
-          justify-content: space-between;
+          padding: 1rem;
           width: 100%;
         }
         @include desktop {
