@@ -457,6 +457,18 @@ body {
         .list__comment {
           margin: 0rem 0rem 1rem 0rem;
         }
+        .list__likeSection {
+          display: flex;
+          margin-bottom: 1rem;
+          align-items: center;
+
+          .list__likeCount{
+            margin: 0 0.5rem 0 0;
+          }
+          .list__likeBtn {
+            // margin-bottom: 1rem;
+          }
+        }
       }
     }
   }

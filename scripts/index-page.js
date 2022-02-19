@@ -7,6 +7,7 @@ const commentsForm = document.querySelector('.comments__form');
 const commentsName = document.querySelector('.comments__name');
 const commentsComment = document.querySelector('.comments__comment');
 const commentsList = document.querySelector('.list');
+const likeBtn = document.querySelector('list__likeBtn');
 const arr = [];
 
 // AXIOS GET request for comments
@@ -61,14 +62,23 @@ function renderComments(arr) {
     const name = create('p', 'list__name', comment.name);
     const date = create('p', 'list__date', new Date(comment.timestamp).toLocaleDateString());
     const commentP = create('p', 'list__comment', comment.comment);
+    // like button
+    // const likeSection = create('div', 'list__likeSection');
+    // const likeCount = create('p', 'list__likeCount', comment.likes);
+    // const commentLike = create('img', 'list__likeBtn');
+    // commentLike.src = "../assets/Icons/SVG/icon-like.svg";
 
     // append all elements to their respective parents
     head.appendChild(name);
     head.appendChild(date);
 
+    // likeSection.appendChild(likeCount); // like
+    // likeSection.appendChild(commentLike); // like
+
     avatarBox.appendChild(avatar);
     infoBox.appendChild(head);
     infoBox.appendChild(commentP);
+    // infoBox.appendChild(likeSection); // like
 
     commentsLi.appendChild(avatarBox);
     commentsLi.appendChild(infoBox);
@@ -84,3 +94,29 @@ function sortCommentsByDate(arr) {
 };
 
 renderComments(arr);
+
+
+
+// ------------------------- OPTIONAL (LIKES put request)
+
+// let firstID = "3f811415-5ee1-4647-865c-0873df3b156d";
+
+// AXIOS PUT request for likes
+// function addLike(id) {
+//   const likesObject = axios.put(`https://project-1-api.herokuapp.com/comments/${id}?api_key=${ApiKey}`, {
+//   like: 1,
+//   }).then(result => {
+//     console.log(likesObject);
+//   }).catch(error => {
+//     console.log(error);
+//   })
+// }
+
+// addLike("3f811415-5ee1-4647-865c-0873df3b156d");
+
+
+// // listening for click to add like to comment
+// likeBtn.addEventListener('click', event => {
+//   event.preventDefault();
+//   addLike()
+// });

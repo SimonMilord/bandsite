@@ -510,7 +510,14 @@ body {
 .comments .comments__wrapper .list .list__item .list__comment {
   margin: 0rem 0rem 1rem 0rem;
 }
-
+.comments .comments__wrapper .list .list__item .list__likeSection {
+  display: flex;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+.comments .comments__wrapper .list .list__item .list__likeSection .list__likeCount {
+  margin: 0 0.5rem 0 0;
+}
 footer {
   background-color: #323232;
   color: #FFF;
