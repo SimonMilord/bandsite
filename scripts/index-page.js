@@ -1,4 +1,5 @@
 // API KEY:
+// full get request API comments: https://project-1-api.herokuapp.com/comments?api_key=0ce694ad-dd06-4c73-a317-283414a7c453
 const ApiKey = {"api_key":"0ce694ad-dd06-4c73-a317-283414a7c453"};
 
 // gather DOM elements and variables
@@ -19,6 +20,7 @@ function getComment() {
   });
 }
 getComment();
+
 // form event listener : submit
 commentsForm.addEventListener('submit', event => {
   event.preventDefault();
@@ -32,21 +34,13 @@ function postComment(name, comment) {
     name: name,
     comment: comment,
   }).then(response => {
-    console.log(response);
     getComment();
   }).catch(error => {
     console.log(error);
   })
 }
 
-
-// function displayComment(commentObject) {
-//   // arr.push(commentObject);
-//   getComment();
-//   renderComments(arr);
-// }
-console.log(arr);
-// creates html element, add class and innertext to be appended
+// creates html element, add class and innertext to be appended if the case / passes null by default
 function create(element, className, text = null) {
   const domLm = document.createElement(element);
   domLm.classList.add(className);
@@ -56,34 +50,19 @@ function create(element, className, text = null) {
 
 function renderComments(arr) {
   sortCommentsByDate(arr);
-  commentsList.innerHTML = '';
+  commentsList.innerText = '';
 
   arr.forEach((comment) => {
-    // create li with class list__item
     const commentsLi = create('li', 'list__item');
-
-    // create div with class list__avatar-box
     const avatarBox = create('div', 'list__avatar-box');
-
-    // create div with class list__avatar
     const avatar = create('div', 'list__avatar');
-
-    // create div with class list__info-box
     const infoBox = create('div', 'list__info-box');
-
-    // create div with class list__head
     const head = create('div', 'list__head');
-
-    // create div with class list__name
     const name = create('p', 'list__name', comment.name);
-
-    // create div with class list__date
     const date = create('p', 'list__date', new Date(comment.timestamp).toLocaleDateString());
-
-    // create div with class list__comment
     const commentP = create('p', 'list__comment', comment.comment);
 
-    // append all elements to their respective parents (in order of nesting)
+    // append all elements to their respective parents
     head.appendChild(name);
     head.appendChild(date);
 
